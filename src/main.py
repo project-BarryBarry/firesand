@@ -8,7 +8,7 @@ import requests as requests
 
 # fetch json from github
 def get_download_info():
-    url = 'https://raw.githubusercontent.com/username/repo/master/download.json'
+    url = 'https://raw.githubusercontent.com/project-BarryBarry/firesand/main/download.json'
     return json.loads(requests.get(url).text)
 
 
