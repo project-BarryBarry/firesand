@@ -1,0 +1,19 @@
+version: "3"
+services:
+  main:
+    image: "project-barrybarry/firesand:latest"
+    ports:
+      - "127.0.0.1:55821:55921"
+      - "127.0.0.1:55822:55922"
+      - "127.0.0.1:55823:55923"
+      - "127.0.0.1:4442:4443"
+      - "127.0.0.1:16105:16106"
+      - "6080:80"
+    environment:
+      USER: "ubuntu"
+      PASSWORD: "ubuntu"
+    volumes:
+      - "/dev/shm:/dev/shm"
+      - "${HOME}/.pki:/home/ubuntu/.pki"
+      - "/home/ubuntu/.config"
+    restart: always
