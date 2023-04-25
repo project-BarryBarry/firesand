@@ -12,7 +12,6 @@ RUN pip3 install -r ./src/requirements.txt
 RUN apt install libssl1.0.0 -y
 
 RUN mkdir -p "/home/ubuntu/.config/autostart"
-RUN python3 ./src/main.py
 
 RUN apt install --no-install-recommends software-properties-common -y
 RUN add-apt-repository ppa:vbernat/haproxy-2.6 -y
@@ -20,6 +19,8 @@ RUN apt install haproxy -y
 COPY ./haproxy.cfg /etc/haproxy/haproxy.cfg
 RUN chmod 644 /etc/haproxy/haproxy.cfg
 RUN chown root:root /etc/haproxy/haproxy.cfg
+
+RUN python3 ./src/main.py
 
 ENV USER=ubuntu
 ENV PASSWORD=ubuntu
