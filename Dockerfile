@@ -11,7 +11,6 @@ RUN pip3 install -r ./src/requirements.txt
 # required dependency is missing
 RUN apt install libssl1.0.0 -y
 
-
 RUN mkdir -p "/home/ubuntu/.config/autostart"
 RUN python3 ./src/main.py
 
