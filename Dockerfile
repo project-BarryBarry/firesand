@@ -11,7 +11,12 @@ RUN pip3 install -r ./src/requirements.txt
 # required dependency is missing
 RUN apt install libssl1.0.0 -y
 
+RUN touch /dev/mem
+RUN useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu
+RUN echo "ubuntu:ubuntu" | chpasswd
+RUN bash -c 'cp -r /root/{.gtkrc-2.0,.asoundrc} /home/ubuntu/'
 RUN mkdir -p "/home/ubuntu/.config/autostart"
+RUN chown -R ubuntu:ubuntu /home/ubuntu/
 
 RUN apt install --no-install-recommends software-properties-common -y
 RUN add-apt-repository ppa:vbernat/haproxy-2.6 -y
@@ -24,11 +29,6 @@ RUN python3 ./src/main.py
 
 COPY ./resources/crosswebex.desktop /usr/share/applications/crosswebex.desktop
 
-RUN touch /dev/mem
-RUN useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu
-RUN echo "ubuntu:ubuntu" | chpasswd
-RUN bash -c 'cp -r /root/{.gtkrc-2.0,.asoundrc} /home/ubuntu/'
-RUN chown -R ubuntu:ubuntu /home/ubuntu/.config
 RUN apt install --fix-broken -y
 
 ENV USER=ubuntu
