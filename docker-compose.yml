@@ -20,4 +20,5 @@ services:
       - "/dev/shm:/dev/shm"
       - "${HOME}/.pki:/home/ubuntu/.pki"
       - "/home/ubuntu/.config"
+      - "/home/ubuntu/NPKI:${HOME}/NPKI"
     restart: always
