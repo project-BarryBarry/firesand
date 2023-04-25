@@ -7,7 +7,7 @@ runing all secure programs in docker
 
 This is for when security programs do not install due to dependency issues like this.
 
-# Getting Started
+## Getting Started
 Before starting, you need to install [docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/).
 
 Start the container by running the following command:
