@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.1.2.7
+Name=Anysign4PC
+Exec=/opt/anysign4pc/amd64/AnySign.ex
+Terminal=false
+X-MultipleArgs=false
+Type=Application

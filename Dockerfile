@@ -27,9 +27,11 @@ RUN chown root:root /etc/haproxy/haproxy.cfg
 
 RUN python3 ./src/main.py
 
-COPY ./resources/crosswebex.desktop /usr/share/applications/crosswebex.desktop
+RUN echo "/opt/anysign4pc/amd64/"|tee "/etc/ld.so.conf.d/anysign4pc.conf"
+RUN ldconfig
 
-RUN apt install --fix-broken -y
+COPY ./resources/crosswebex.desktop /usr/share/applications/crosswebex.desktop
+COPY ./resources/anysign4pc.desktop /usr/share/applications/anysign4pc.desktop
 
 ENV USER=ubuntu
 ENV PASSWORD=ubuntu
