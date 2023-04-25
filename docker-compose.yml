@@ -1,7 +1,7 @@
 version: "3"
 services:
   main:
-    image: "project-barrybarry/firesand:latest"
+    image: "ghcr.io/project-barrybarry/firesand:main"
     ports:
       - "127.0.0.1:55920:55820"
       - "127.0.0.1:55921:55821"
