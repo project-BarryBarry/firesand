@@ -22,6 +22,15 @@ RUN chown root:root /etc/haproxy/haproxy.cfg
 
 RUN python3 ./src/main.py
 
+COPY ./resources/crosswebex.desktop /usr/share/applications/crosswebex.desktop
+
+RUN touch /dev/mem
+RUN useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu
+RUN echo "ubuntu:ubuntu" | chpasswd
+RUN bash -c 'cp -r /root/{.gtkrc-2.0,.asoundrc} /home/ubuntu/'
+RUN chown -R ubuntu:ubuntu /home/ubuntu/.config
+RUN apt install --fix-broken -y
+
 ENV USER=ubuntu
 ENV PASSWORD=ubuntu
 

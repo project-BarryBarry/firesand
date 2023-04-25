@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=3.3.2.41
+Name=CrossWebEX
+Exec=/opt/INITECH/crosswebex/INISAFECrossWebEXSvc
+Terminal=false
+X-MultipleArgs=false
+Type=Application

@@ -1,16 +1,15 @@
 #!/bin/sh
+
 # Run the application background
-sudo -u ubuntu nohup /opt/wizvera/veraport/veraport &
 
-sudo -u ubuntu nohup /opt/INITECH/crosswebex/INISAFECrossWebEXSvc &
-
-touch /dev/mem
-
-nohup /opt/AhnLab/ASTx/astxdaemon &
+nohup /opt/AhnLab/ASTx/astxdaemon > /dev/null &
+sudo -u ubuntu nohup /opt/wizvera/veraport/veraport > /dev/null &
 
 # Run haproxy
-nohup haproxy -f /etc/haproxy/haproxy.cfg &
+nohup haproxy -f /etc/haproxy/haproxy.cfg > /dev/null &
 
 chown -R ubuntu:ubuntu /home/ubuntu/.config
+
+apt install --fix-broken -y
 
 /startup.sh
