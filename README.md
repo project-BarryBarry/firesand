@@ -3,6 +3,8 @@
 
 runing all secure programs in docker
 
+**Currently works only in Chromium**
+
 ![image](https://user-images.githubusercontent.com/24631476/234180310-6e146c26-7b61-4ec2-9a68-9c3099428c6a.png)
 
 This is for when security programs do not install due to dependency issues like this.
@@ -21,6 +23,13 @@ You can access the container at [here](http://127.0.0.1:6080).
 Run the security program you need from 'Menu → Other'.
 
 If you don't have the programs you need, most Web sites will automatically try to install them when you run Veraport.
+
+Your browser should always trust localhost's ssl certificate.
+
+Follow these steps to make Chromium trust localhost's certificate:
+1. Paste `chrome://flags/#allow-insecure-localhost` into the address bar.
+2. Press Enter.
+3. Change the value to Enabled.
 
 ## How this works?
 1. First, forward the port of the security program bound to the local host to 0.0.0.0 through haproxy.
