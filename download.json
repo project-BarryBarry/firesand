@@ -1,38 +1,44 @@
 [
   {
-    "name": "astx",
+    "name": "ahnlab-safe-transaction",
     "author": "Ahnlab",
     "hash": "381a07f85064ff18061a72582937423c7bdbc335e00f53616d76ccb33c312c0e300ba8eb99347ecf258f8a63ee565e7ca5b9b8e19aeb5aaf2f408af2260660b7",
-    "url": "https://drive.google.com/file/d/1vraNp8FI09ORj7TbvLITuK7v729EqUye/view?usp=sharing"
+    "url": "https://drive.google.com/file/d/1vraNp8FI09ORj7TbvLITuK7v729EqUye/view?usp=sharing",
+    "without_postinst": false
   },
   {
     "name": "crosswebex",
     "author": "INISAFE",
     "hash": "5aa4648dc01a59a92b7e56f1cf62d15448a189e55ae659b5e66910110632fb7515ca98b56d8b89d43f9570ec409e95fe1a8b0ce03cb30529078d8f585d0a8feb",
-    "url": "https://drive.google.com/file/d/1zXn0CDzlkbCfxAUar3X1wheBRfHPB8bp/view?usp=share_link"
+    "url": "https://drive.google.com/file/d/1zXn0CDzlkbCfxAUar3X1wheBRfHPB8bp/view?usp=share_link",
+    "without_postinst": false
   },
   {
     "name": "delfino-g3",
     "author": "WIZVERA",
     "hash": "d64ce0bc88fe6915d96b3059ac86ce2a994751ee07b2a35bfe5c3456d789302c05b70a722944c804b947721d8411beabb5b1379481b012696f0e032334908d7d",
-    "url": "https://drive.google.com/file/d/1PKvVFe9zhU1VcOhOvZPZhkpw6m4Lx8MA/view?usp=share_link"
+    "url": "https://drive.google.com/file/d/1PKvVFe9zhU1VcOhOvZPZhkpw6m4Lx8MA/view?usp=share_link",
+    "without_postinst": false
   },
   {
     "name": "veraport-g3",
     "author": "WIZVERA",
     "hash": "82c207f03dd61ce105fc53a20dd0f36ee40ded8f23a8e9ebb2dc1fb698a5e3b2f402a64772ddd1f7212eb28cd1aaa5208c8e969609465a77fd719fd52876679f",
-    "url": "https://drive.google.com/file/d/17e80BvdFccTrm5VKjt4J2eqSfs0eVOzA/view?usp=share_link"
+    "url": "https://drive.google.com/file/d/17e80BvdFccTrm5VKjt4J2eqSfs0eVOzA/view?usp=share_link",
+    "without_postinst": false
   },
   {
     "name": "anysign4pc",
     "author": "Softforum",
     "hash": "e09a2a603d68a2075dd48bd71f0e886a15366b945e4bbc93e037adba777c0b745281f49721ac79d8d81140fa1c25b2bdd66a6b01143667ce41715fe8a5a7b6f6",
-    "url": "https://drive.google.com/file/d/1erwPtRMQXZAb8lUUctlKv3ACrgyqOupu/view?usp=share_link"
+    "url": "https://drive.google.com/file/d/1erwPtRMQXZAb8lUUctlKv3ACrgyqOupu/view?usp=share_link",
+    "without_postinst": false
   },
   {
-    "name": "IPinsideLWS",
+    "name": "ipinside-lws",
     "author": "Interezen",
     "hash": "9edbc0525636d379bac2df7b9abb9f2ee4a8191170ff97ac8d1d66c1613a0386123ee058f66d31ce830f87055257d2b4f000dc5ade57d9faba4d1da766e8c291",
-    "url": "https://drive.google.com/file/d/1_6kUuAeKrq8KaQ1UhZC09UBsihS5idzd/view?usp=share_link"
+    "url": "https://drive.google.com/file/d/1_6kUuAeKrq8KaQ1UhZC09UBsihS5idzd/view?usp=share_link",
+    "without_postinst": true
   }
 ]
