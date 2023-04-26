@@ -27,6 +27,9 @@ RUN chown root:root /etc/haproxy/haproxy.cfg
 
 RUN python3 ./src/main.py
 
+RUN echo "#!/bin/sh"|tee /usr/bin/systemctl
+RUN chmod +x /usr/bin/systemctl
+
 RUN echo "/opt/anysign4pc/amd64/"|tee "/etc/ld.so.conf.d/anysign4pc.conf"
 RUN ldconfig
 
