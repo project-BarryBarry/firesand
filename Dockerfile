@@ -25,6 +25,8 @@ COPY ./haproxy.cfg /etc/haproxy/haproxy.cfg
 RUN chmod 644 /etc/haproxy/haproxy.cfg
 RUN chown root:root /etc/haproxy/haproxy.cfg
 
+RUN mkdir -p /var/lib/update-notifier/
+
 RUN python3 ./src/main.py
 
 RUN echo "#!/bin/sh"|tee /usr/bin/systemctl
@@ -34,6 +36,9 @@ RUN echo "/opt/anysign4pc/amd64/"|tee "/etc/ld.so.conf.d/anysign4pc.conf"
 RUN ldconfig
 
 COPY ./resources/crosswebex.desktop /usr/share/applications/crosswebex.desktop
+
+# ipinside-lws must run with root
+RUN rm /usr/share/applications/ipinside-lws.desktop
 
 ENV USER=ubuntu
 ENV PASSWORD=ubuntu
