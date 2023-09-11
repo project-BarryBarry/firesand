@@ -42,6 +42,7 @@ RUN rm /usr/share/applications/ipinside-lws.desktop
 
 ENV USER=ubuntu
 ENV PASSWORD=ubuntu
+ENV TINI_SUBREAPER=true
 
 COPY ./run.sh /run.sh
 RUN chmod +x /run.sh
